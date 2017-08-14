@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="content"></div>
+
+@section Scripts {
+    <script>
+        ReactDOM.render(
+            React.createElement(CommentBox, {
+                initialData: [],
+                url: "/comments",
+                submitUrl: "/comments/new",
+                pollInterval: 2000
+            }),
+            document.getElementById('content')
+        );
+    </script>
+}

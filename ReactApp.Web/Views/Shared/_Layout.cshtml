@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ReactApp.Web</title>
+</head>
+<body>
+    
+    @RenderBody()
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/site.scss.css" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/css/css.bundle.css" />
+    </environment>
+
+    <environment names="Development">
+        <script src="~/lib/react-15.6.1.js" asp-append-version="true"></script>
+        <script src="~/lib/react-dom-15.6.1.js" asp-append-version="true"></script>
+        <script src="~/lib/remarkable-1.6.0.js" asp-append-version="true"></script>
+        <script asp-src-include="~/jsx/**/*jsx.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/lib/lib.bundle.js"></script>
+        <script src="~/jsx/jsx.bundle.js"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+    
+</body>
+</html>
