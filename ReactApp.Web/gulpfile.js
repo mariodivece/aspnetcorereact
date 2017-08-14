@@ -1,7 +1,8 @@
-﻿/// <binding BeforeBuild='watch' ProjectOpened='watch' />
+﻿/// <binding BeforeBuild='_auto:build' ProjectOpened='_auto:watch:css, _auto:watch:jsx, _auto:watch:lib' />
 /*
 This file is the main entry point for defining Gulp tasks and using Gulp plugins.
-Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
+It implements a simple, per-directory build system that can handle ES2015, saas, jsx, etc.
+It also creates _auto tasks for automatically rebuilding bundles, cleaning files and watching for changes 
 */
 
 var wwwwRoot = "./wwwroot";
